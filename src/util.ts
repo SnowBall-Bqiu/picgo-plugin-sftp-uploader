@@ -14,6 +14,11 @@ export function formatPath(output: IImgInfo, userConfig: ISftpLoaderPathInfo): I
       date.getMonth() < 9
         ? `0${date.getMonth() + 1}`
         : `${date.getMonth() + 1}`,
+    // 新增day
+    day:
+      date.getDate() < 10
+        ? `0${date.getDate()}`
+        : `${date.getDate()}`,
 
     // 文件名
     fullName: output.fileName,
